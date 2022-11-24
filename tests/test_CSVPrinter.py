@@ -6,12 +6,12 @@ class TestCSVPrinter(unittest.TestCase):
     def test_read(self):
         printer = CSVPrinter("sample.csv")
         l = printer.read()
-        self.assertEqual(2,len(l))
+        self.assertEqual(3,len(l))
 
     def test_read2(self):
         printer = CSVPrinter("sample.csv")
         line = printer.read()
-        self.assertSetEqual("aaa1",line[0][0])
+        self.assertSetEqual("bbb2",line[1][1])
 
     def test_read3(self):
         try:
